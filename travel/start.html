@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		#menu {
+			width: 100%;
+			height: 70px;
+			border: solid 0px transparent;
+			background-color: white;
+			position: fixed;
+			top: 0px;
+			z-index: 1;
+		}
+
+		#menu ul {
+			width: 600px;
+			height: 50px;
+			border: solid 0px transparent;
+			/*将框框的padding设置为零，不然会导致框框里的内容与框边缘有间隔*/
+			position: relative;
+			top: 10px;
+			float: right;
+		}
+
+		#menu li {
+			list-style-type: none;
+			float: left;
+		}
+
+		#menu a {
+
+			display: inline-block;
+			/*将a变成块状*/
+			font-family: Microsoft Yahei;
+			line-height: 35px;
+			/*设置字体在块中的高度*/
+			margin: 0px 10px;
+			/*块里的高宽通过margin设置*/
+			color: black;
+			text-align: center;
+			/*字体居中*/
+			text-decoration: none;
+			/*去掉下划线*/
+			font-size: 15px;
+		}
+
+		#menu ul li ul {
+			display: none;
+			/*默认隐藏*/
+			width: 100px;
+			border: 0px solid transparent;
+			position: absolute;
+			top: 30px;
+			z-index: 2;
+		}
+
+		#menu ul li:hover ul {
+			display: block;
+		}
+
+		#menu ul li:hover ul li a {
+			display: block;
+		}
+
+		#menu a:hover {
+			border-bottom: solid black;
+			color: rgb(71, 175, 189);
+
+		}
+
+		.font {
+			color: pink;
+			font-size: 70px;
+			animation: name 6s ease-in-out 2s infinite alternate;
+		}
+
+		@keyframes name {
+			20% {
+				color: red;
+			}
+
+			40% {
+				color: orange;
+			}
+
+			60% {
+				color: cadetblue;
+			}
+
+			80% {
+				color: palegoldenrod;
+			}
+
+			100% {
+				color: mediumorchid;
+			}
+		}
+
+		button:hover {
+			cursor: pointer;
+		}
+
+		.a {
+			color: cadetblue;
+			text-decoration: none;
+		}
+
+		.a:hover {
+			text-decoration: underline;
+		}
+
+		#one {
+			width: 1150px;
+			height: 100px;
+			color: #666666;
+			border-bottom: 1px lightgray solid;
+			margin: 100px;
+			font-size: 20px;
+		}
+
+		#five {
+			width: 1080px;
+			height: 350px;
+			margin: 1px;
+			background-color: white;
+			border: solid transparent;
+			position: relative;
+			top: 100px;
+			left: 120px;
+		}
+
+		.three {
+			width: 200px;
+			height: 288px;
+			border: solid transparent;
+			margin: 5px;
+			float: right;
+
+		}
+
+		.three:hover {
+			transform: scale(1.1);
+		}
+
+		#eight {
+			width: 1080px;
+			height: 250px;
+			margin: 1px;
+			background-color: white;
+			border: solid transparent;
+			position: relative;
+			left: 120px;
+			top: 250px;
+		}
+
+		.six {
+			width: 253px;
+			height: auto;
+			/* border: solid; */
+			margin: 5px;
+			float: right;
+			position: relative;
+			top: 50px;
+		}
+
+		.six a {
+			text-decoration: none;
+		}
+
+		.six a:hover {
+			text-decoration: underline;
+
+		}
+	</style>
+</head>
+
+<body>
+	<div id="menu">
+		<a href="index.html" style="width: 45px;height: 45px;">
+			<img src="image/QQ截图20200412200420.png" width="45px" ;height="45px" ; />
+		</a>
+		<ul>
+			<li><a href="#">语言切换</a>
+				<ul>
+					<li><a href="#">简体中文</a></li>
+					<li><a href="#">English</a></li>
+				</ul>
+			</li>
+			<li><a href="#">￥CNY</a></li>
+			<li><a href="#">成为房东/体验达人</a></li>
+			<li><a href="#">历史足迹</a></li>
+			<li><a href="help.html">帮助</a></li>
+			<li><a href="register.html">注册</a></li>
+			<li><a href="login.html">登录</a></li>
+		</ul>
+	</div>
+
+	<div style="width: 100%;height: 880px;position: fixed;z-index: -1;top: -20px;">
+		<video src="video/视频.mp4" loop="loop" autoplay="autoplay"></video>
+	</div>
+	<div>
+		<div style="width: 100%;height: auto;border: solid 0px;background-color: white;position: relative;top: 60px;">
+
+			<div
+				style="width: 50%;height: 420px;border: solid transparent;margin: 10px;position: relative;left: 150px;background-color: white;">
+				<font size="5px"><b>在爱彼迎开展体验</b></font>
+				<p class="font"><b>带领别人做自己热爱的事，顺便赚取收入</b></p>
+				<a href="#start" style="color: white;background-color:black;position: relative;top: 20px;
+							border: solid 15px transparent;border-radius: 5px; text-decoration: none;">
+					<b>开始吧 </b>
+		</a>
+			</div>
+		</div>
+	</div>
+	<div style="width: 100%;height: 500px;border:solid 0px transparent;padding: 0px;" id="start">
+		<div
+			style="width: 800px;height: auto;border: solid transparent;color: white;position: relative;top: 300px;margin: 50px;">
+			<p>
+				<font size="6"><b>什么是体验？</b></font>
+			</p>
+			体验是由世界各地的当地达人策划并组织开展的活动，而不仅仅是普通的参观游览或课程。
+			快来通过开展体验，向大家展示一下您的城市、技艺、事业或文化吧。
+		</div>
+		<button type="button" style="border: solid white;background-color: transparent;color: white;
+						width: 100px;height: 50px;float: right;position: relative;top: 120px;margin: 100px;" id="btn">
+			暂停
+		</button>
+	</div>
+	<div
+		style="width: 100%;height: 1600px;border:solid 0px transparent;background-color: black;padding: 0px;box-shadow: black 0px -100px 200px 100px;">
+		<div style="width: 1100px;height: 500px;margin-left: 100px;">
+			<img src="image/2bdf020b-303c-46a4-bf2c-6c6a8e775bd8.jpg" width="400px" height="500px" />
+			<div
+				style="width: 400px;height: 300px;color: white;float: right;border: solid transparent;position: relative; top: 70px;">
+				<font size="7"><b>以您的独到方式创建活动</b></font><br /><br />
+				<font size="4" style="position: relative;left: 50px;">
+					<b>自行车美食之旅、灯光秀夜景拍摄、在船上品尝小吃、有小山羊陪伴的瑜伽体验。您可以策划和打造让大家渴望尝试的独特活动。</b></font>
+			</div>
+		</div>
+		<div style="width: 1100px;height: 500px;margin-left: 100px;">
+			<img src="image/55b065f5-e6d9-4a0a-8066-9c1850db7660.jpg" width="400px" height="500px"
+				style="float: right;" />
+			<div
+				style="width: 400px;height: 300px;color: white;border: solid transparent;position: relative; top: 100px;">
+				<font size="7"><b>做自己喜欢的事情（并获得报酬）</b></font><br /><br />
+				<font size="4" style="position: relative;left: 100px" ;>
+					<b>开展街头艺术之旅、夕阳冲浪体验，把您的兴趣爱好转化为收入来源。不用拼命工作，照样能轻松赚取收入。</b></font>
+			</div>
+		</div>
+		<div style="width: 1100px;height: 500px;margin-left: 100px;">
+			<img src="image/d1d720a0-7253-4f89-b9b4-50759c376a9a.jpg" width="400px" height="500px" />
+			<div
+				style="width: 400px;height: 300px;color: white;float: right;border: solid transparent;position: relative; top: 100px;">
+				<font size="7"><b>让更多人了解您为之奋斗的事业</b></font><br /><br />
+				<font size="4" style="position: relative;left: 50px;"><b>组织和救援犬同行的徒步体验或宣扬永续时尚理念，以全新方式提高大众对公益事业的认知。</b>
+				</font>
+			</div>
+		</div>
+	</div>
+	<div style="width: 100%;height: 250px;background-color: white;position: relative;bottom: 20px;">
+		<div style="position: relative;top: 100px;margin-left: 150px;">
+			<h1><b>展示您的特长</b></h1>
+		</div>
+		<div style="width: 500px;position: relative;top: 35px;margin-left: 750px;">体验类别丰富，如烹饪、手工艺、皮划艇等。 您可以毫无束缚地尽情发挥。
+			了解这些精选类别。</div>
+	</div>
+	<div style="width: 100%;height: 600px;background-color: gainsboro;position: relative;bottom: 20px;">
+		<div
+			style="width: 300px;height: 500px;border: solid transparent;float: left;margin: 50px;margin-left: 120px;box-shadow:gray 10px 10px 20px 1px;">
+			<img src="image/1ecf2c03-5b86-4af3-a194-c18764eafbb3.jpg" width="300px" height="300px" />
+			<div style="margin-left: 10px;width: 300px;">
+				<h1><b>自然与户外</b></h1>
+				<p>组织大自然徒步之旅、水上运动、山地运动等精彩活动</p>
+				<a href="#" style="color: green;text-decoration: none;">查看</a>
+			</div>
+		</div>
+		<div
+			style="width: 300px;height: 500px;border: solid transparent;float: left;margin: 50px;box-shadow:gray 10px 10px 20px 1px;">
+			<img src="image/eca85a07-8fad-4648-a4a4-b4c9283fdd65.jpg" width="300px" height="300px" />
+			<div style="margin-left: 10px;width: 300px;">
+				<h1><b>餐饮</b></h1>
+				<p>您可以组织美食之旅、烹饪课、用餐体验及其他活动</p>
+				<a href="#" style="color: orange;text-decoration: none;">查看</a>
+			</div>
+		</div>
+		<div
+			style="width: 300px;height: 500px;border: solid transparent;float: left;margin: 50px;box-shadow:gray 10px 10px 20px 1px;">
+			<img src="image/36ad251f-02c2-486a-965f-1d473e25e509.jpg" width="300px" height="300px" />
+			<div style="margin-left: 10px;width: 300px;">
+				<h1><b>文化与历史</b></h1>
+				<p>分享您所在城市著名地标背后的故事</p>
+				<a href="#" style="color: firebrick;text-decoration: none;">查看</a>
+			</div>
+		</div>
+	</div>
+	<div style="width: 100%;height: 1050px;background-color: white;">
+		<div style="width: 100%;height: 250px;background-color: white;position: relative;bottom: 20px;">
+			<div style="width: 500px; position: relative;top: 100px;margin-left: 170px;">
+				<h1><b>加入成长中的达人社区</b></h1>
+			</div>
+			<div style="width: 500px;position: relative;top: 35px;margin-left: 750px;color: #666666;">
+				我们的体验达人有厨师、艺术家、DJ和其他各行各业的人才。 体验达人帮助来自世界各地的人们彼此相连，
+				让他们有机会参观独一无二的地方，参加独一无二的活动。</div>
+		</div>
+		<div style="width: 500px;height:750px;background-color: palegoldenrod;float: left;margin-left: 130px;">
+			<img src="image/b7f0cbdb-2251-4513-b3cc-b93546606c7c.jpg" width="400px" height="450px"
+				style="margin: 50px;" />
+			<div style="width: 400px;margin-left: 50px;">
+				<h2><b>DJ Jigüe</b></h2>
+				<p style="color: #666666;">Jigüe热衷于分享自己对古巴黑人音乐的热爱。听完他介绍古巴厚重的音乐史，有些参与者甚至去了德州的奥斯汀看他演出。</p>
+				<a href="#" style="text-decoration: none;color: #FF7F50;">查看体验</a>
+			</div>
+		</div>
+		<div style="width: 500px;height:750px;background-color: peachpuff;float: left;margin-left: 130px;">
+			<img src="image/ff8d1952-e25c-4df8-889f-a846f7b34897.jpg" width="400px" height="450px"
+				style="margin: 50px;" />
+			<div style="width: 400px;margin-left: 50px;">
+				<h2><b>Cici</b></h2>
+				<p style="color: #666666;">烹饪体验达人Cici是上海人，她相信烹饪能够带来幸福。 她欢迎参与者来到她的厨房，学习如何以有趣的方式制作经典上海小笼包。</p>
+				<a href="#" style="text-decoration: none;color: #FF7F50;">查看体验</a>
+			</div>
+		</div>
+	</div>
+	<div style="width: 100%;height: 1050px;background-color: white;box-shadow: #A9A9A9 0px -5px 100px 1px;">
+		<div style="width: 100%;height: 250px;background-color: white;">
+			<div style="position: relative;top: 100px;margin-left: 150px;">
+				<h1><b>我们全程为您提供支持</b></h1>
+			</div>
+			<div style="width: 500px;position: relative;top: 35px;margin-left: 750px;color: #666666;">
+				专门针对您开展体验的需求而提供的文章和见解等资源、
+				为您和参与者提供24小时客服支持、提高体验曝光率等。</div>
+		</div>
+		<div style="width: 1100px;height: 300px;background-color: lightyellow ;margin-left: 150px;">
+
+			<div style="color: firebrick;text-align: center;float: left;margin: 10px;position: relative;top: 70px;">
+				<img src="image/icon-uc-alarm.e0a2b02f.gif"
+					style="border:solid firebrick 2px;border-radius:10px ;padding: 10px;background-color: white;" /><br>
+				达成目标
+			</div>
+			<div style="color: cadetblue;text-align: center;float: left;margin: 10px;position: relative;top: 70px;">
+				<img src="image/icon-uc-calendar.ace59291.gif"
+					style="border:solid cadetblue 2px;border-radius:10px ;padding: 10px;background-color: white;" /><br>
+				安排体验
+			</div>
+			<div style="color: gold;text-align: center;float: left;margin: 10px;position: relative;top: 70px;">
+				<img src="image/icon-uc-money-saved.0d988c4e.gif"
+					style="border:solid yellow 2px;border-radius:10px ;padding: 10px;background-color: white;" /><br>
+				接受付款
+			</div>
+			<div style="color: cadetblue;text-align: center;float: left;margin: 10px;position: relative;top: 70px;">
+				<img src="image/icon-uc-graph.3f8bd411.gif"
+					style="border:solid cadetblue 2px;border-radius:10px ;padding: 10px;background-color: white;" /><br>
+				数据支持
+			</div>
+			<div style="float: left;margin: 30px;position: relative;top: 30px;width: 500px;">
+				<h2><b>为您量身打造的工具</b></h2>
+				通过控制面板，您可以查看有价值的建议、收到改进建议，查看世界各地的参与者如何通过搜索和筛选功能发现您的体验，另外还有无忧支付和其他功能。
+			</div>
+		</div>
+		<div
+			style="width: 540px;height: 400px;background-color: lightyellow ;margin: 10px;margin-left: 150px;float: left;">
+			<img src="image/盾.png" style="background-color: white;padding: 15px;margin: 30px;" />
+			<div style="width: 350px;height: 120px;background-color:peru;position: relative;left: 150px;bottom: 205px;">
+				<p style="position: relative;top: 50px;color: white;text-align: center;margin: 50px;">
+					<b>为大多数体验活动提供高达100万美元的体验保障险</b></p>
+			</div>
+			<div style="width: 400px;margin: 10px;position: relative;bottom: 110px;">
+				<h2><b>安心无忧</b></h2>
+				<font>对于大多数体验项目，我们有高达100万美元的保险为您提供保障。 此外我们还提供24小时用户支持，让您可以全身心投入于兴趣所在。</font>
+				<a href="#" class="a">了解详情</a>
+			</div>
+		</div>
+		<div style="width: 540px;height: 400px;background-color: lightyellow ;margin: 10px;float: left;">
+			<div
+				style="background-image: url(image/3a775aa8-1242-4343-bd3e-70104b1b9a3c.jpg);
+					background-size: 150px 250px;border-radius:15px ;width:150px ;height: 250px;color: white;float: left;margin: 10px;">
+				<b style="position: relative;top: 200px;margin: 20px;">最新动向</b></div>
+
+			<div
+				style="background-image: url(image/b4c1f176-6cfb-496e-aca2-83e139963502.jpg);
+					background-size: 150px 250px;border-radius:15px ;width:150px ;height: 250px;color: white;float: left;margin: 10px;">
+				<b style="position: relative;top: 200px;margin: 20px;">特别福利</b></div>
+
+			<div
+				style="background-image: url(image/53682240-aa14-4690-9df2-14b521e9c884.jpg);
+					background-size: 150px 250px;border-radius:15px ;width:150px ;height: 250px;color: white;float: left;margin: 10px;">
+				<b style="position: relative;top: 200px;margin: 20px;">达人活动</b></div>
+
+			<div style="width: 500px;margin: 10px;">
+				<h2><b>成长指南</b></h2>
+				<p>每周简讯、文章和资源致力于帮助您在开展体验过程中的每一步都取得成功。</p>
+			</div>
+		</div>
+	</div>
+	<div style="width: 100%;height: 800px;background-color: white;box-shadow: #A9A9A9 0px -5px 100px 1px;">
+		<div style="width: 100%;height: 250px;background-color: white;">
+			<div style="position: relative;top: 100px;margin-left: 150px;">
+				<h1><b>新手上路</b></h1>
+			</div>
+			<div style="width: 500px;position: relative;top: 45px;margin-left: 750px;color: #666666;font-size: 20px;">
+				开展体验的完整流程如下：</div>
+		</div>
+
+		<div
+			style="width: 350px;height: 300px;background-color: gainsboro;float: left;margin: 10px;margin-left: 150px;">
+			<div
+				style="width: 30px;height: 30px;border: solid 2px;text-align: center;border-radius: 50%;margin: 50px;margin-bottom:0 ;">
+				1</div>
+			<div style="margin: 50px;">
+				<h2><b>了解我们的品质标准</b></h2>
+				满足我们对体验的要求：展现个人专业知识、提供独家专享资源、拉近人与人之间的距离。
+			</div>
+		</div>
+		<div style="width: 350px;height: 300px;background-color: gainsboro;float: left;margin: 10px;">
+			<div
+				style="width: 30px;height: 30px;border: solid 2px;text-align: center;border-radius: 50%;margin: 50px;margin-bottom:0 ;">
+				2</div>
+			<div style="margin: 50px;">
+				<h2><b>创建体验页面</b></h2>
+				人们会通过您的体验页面找到您。请重点强调您的专业技能，添加一些高品质的照片，留下良好的第一印象。
+			</div>
+		</div>
+		<div style="width: 350px;height: 300px;background-color: gainsboro;float: left;margin: 10px;">
+			<div
+				style="width: 30px;height: 30px;border: solid 2px;text-align: center;border-radius: 50%;margin: 50px;margin-bottom:0 ;">
+				3</div>
+			<div style="margin: 50px;">
+				<h2><b>体验上线</b></h2>
+				只要您的体验符合标准，您便可以添加可订日期，随心开展体验
+			</div>
+		</div>
+		<a href="#go" style="background-color: darkcyan;color: white;border:solid 15px transparent;text-decoration: none;
+			border-radius: 5px;position: relative;top: 450px;right: 650px;">开始吧</a>
+	</div>
+	<div id="go" style="width: 100%;height: 1300px;background-color: white;box-shadow: #A9A9A9 0px -5px 100px 1px;">
+		<div style="margin-left: 100px;position: relative;top: 70px;">
+			<h1>常见问题</h1>
+		</div>
+		<div id="one">
+			<b>我必须要出租房屋，然后才能开展体验吗？</b><br />
+			不需要！开展体验无需在家中或其他地方留宿参与者。
+		</div>
+		<div id="one">
+			<b>我需要多长时间开展一次体验？</b><br />
+			多长时间开展一次体验由您决定，您可以自由选择最合适的日期和时间。
+		</div>
+		<div id="one">
+			<b>我需要营业执照吗？</b><br />
+			某些体验可能需要提供营业执照，这取决于体验中涉及的活动。
+			请务必查阅当地法律规定，确定你的体验中可能需要的执照，特别是体验中涉及食物、酒精或交通工具时，需要格外留心。
+			<a href="#" style="text-decoration: none;color: cadetblue;">了解详情</a>
+		</div>
+		<div id="one">
+			<b>我能设置每次体验的最少参与人数吗？</b><br />
+			每次体验的参与人数至少为1人。
+		</div>
+		<div id="one">
+			<b>我需要为参与者购买保险吗？</b><br />
+			体验保障险的承保范围包括了体验中的大部分活动，但飞行、驾驶这一类活动不在保险范围内。
+			如果体验涉及这些活动，你可能需要自行购买保险。
+			<a href="#" style="text-decoration: none;color: cadetblue;">了解详情</a>
+		</div>
+		<div id="one">
+			<b>我可以和别人一起组织体验吗？</b><br />
+			如果体验由你想和其他人共同开展，请在体验页面注明他们的名字，让参与者知道他们将和谁同行。所有体验组织者均需在爱彼迎平台上验证个人真实身份。
+		</div>
+	</div>
+	<div style="width: 100%;height: 872px;background-color: white;box-shadow: white 0px -5px 100px 100px;">
+		<div id="five">
+			<div style="width: 100%;height: 0px;position: relative;bottom: 50px; left: 20px;float: left;">
+				<font size="6"><b>浏览其他体验</b></font><br />
+			</div>
+			<div class="three">
+				<img src="image/6cd91d2a-8a4e-436f-9c80-7a4ab2bd7a20.jpg" width="200px" ; height="250px" ;>
+				<a href="#" style="text-decoration: none;color: #000000;">
+					波多黎各<br />
+					<b>当个海牛饲养员</b><br />
+					￥651/人起<br />
+					4.9 (301)<br />
+				</a>
+
+			</div>
+			<div class="three">
+				<img src="image/8d6eb8c1-d1de-4607-bfb8-ba526e88aead.jpg" width="200px" ; height="250px" ;>
+				<a href="#" style="text-decoration: none;color: #000000;">
+					美国<br />
+					<b>迪士尼度假村之旅+赏烟花</b>迪士尼度假村之旅+赏烟花<br>
+					￥293/人起<br>
+					4.77 (86)
+				</a>
+
+			</div>
+			<div class="three">
+				<img src="image/b52f41bb-9271-46ae-ac89-0d277977a9b2.jpg" width="200px" ; height="250px" ;>
+				<a href="#" style="text-decoration: none;color: #000000;">
+					日本<br>
+					<b>在猫咪咖啡馆里，和喵星人温暖相拥</b><br>
+					￥173/人起<br>
+					4.82 (268)
+				</a>
+			</div>
+			<div class="three">
+				<img src="image/780ed4c2-9977-4651-ad20-ea9600c9dfbf.jpg" width="200px" ; height="250px" ;>
+				<a href="#" style="text-decoration: none;color: #000000;">
+					美国<br>
+					<b>海龟医院导览</b><br>
+					￥183/人起<br>
+					4.83 (84)
+				</a>
+			</div>
+			<div class="three">
+				<img src="image/2372f572-4f80-4646-a7ce-64257a4c2b38.jpg" width="200px" ; height="250px" ;>
+				<a href="#" style="text-decoration: none;color: #000000;">
+					美国<br>
+					<b>在洛杉矶，拍出惊艳朋友圈的美照</b><br>
+					￥359/人起<br>
+					4.82 (441)
+				</a>
+			</div>
+		</div>
+		<hr style="position: relative; top: 200px;" />
+		<div id="eight">
+			<div class="six">
+				<font color="black">客服支持</font><br /><br />
+				<a href="help.html">
+					<font color="gray">帮助</font>
+				</a><br />
+				<a href="#">
+					<font color="gray">邻里支持</font>
+				</a>
+				<font style="background-color: green;color: white;">新推出</font>
+
+			</div>
+			<div class="six">
+				<font color="black">出租</font><br /><br />
+				<a href="#">
+					<font color="gray">为什么要出租?</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">待客之道</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">房东义务</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">开展体验</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">Open Homes</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">资源中心</font>
+				</a>
+				<font style="background-color: green;color: white;">新推出</font>
+
+			</div>
+			<div class="six">
+				<font color="black">发现</font><br /><br />
+				<a href="#">
+					<font color="gray">信任与安全</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">旅行基金</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">爱彼迎公民</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">商务差旅</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">缤纷体验</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">爱彼迎杂志</font>
+				</a>
+			</div>
+			<div class="six">
+				<font color="black">爱彼迎</font><br /><br />
+				<a href="#">
+					<font color="gray">工作机会</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">爱彼迎新闻</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">政策</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">多元化与归属感</font>
+				</a><br>
+				<a href="#">
+					<font color="gray">无障碍设施</font>
+				</a>
+			</div>
+		</div>
+
+	</div>
+	<script src="./js/jQuery.min.js"></script>
+<script>
+	// 控制视频的暂停与播放
+	$("#btn").click(function(){	
+		if ($("video").get(0).paused) {
+			$("video").get(0).play()
+			$("#btn").text("暂停")
+		}else{
+			$("video").get(0).pause()
+			$("#btn").text("播放")
+		}
+	});
+</script>
+</body>
+
+</html>

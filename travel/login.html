@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>登录</title>
+		<style type="text/css">
+			.a{
+				color: orange;
+				text-align: center;
+			}
+			/* .c{
+				color: palevioletred;
+			}
+			input{
+				background-color: transparent;
+			}
+			#all{
+				width:500px;
+				font-family:'黑体'; 
+				margin:50px auto; 
+			} */
+			.divAll{
+			  width:800px; 
+			  font-family:'黑体'; 
+			  margin:50px auto; 
+			  }
+			#titles{ 
+			  font-weight:bold; 
+			  font-size:50px; 
+			  color: coral;
+			  height:50px; 
+			  line-height:50px; 
+			  background:#FFF9F3; 
+			  text-align:center;  
+			  border:1px solid transparent;; 
+			  }
+			#contents{ 
+			   margin-top:20px; 
+			   background:#FFF9F3; 
+			   border:1px solid transparent;; 
+			   }
+			   #form-itemGroup{
+			    padding:10px;  
+			     }
+			   #form-itemGroup label{ 
+			     display:inline-block; 
+			     width:100px; 
+			     height:32px; 
+			     line-height:32px; 
+			     color:#666; 
+			     text-align:right; 
+			     }
+			   #form-itemGroup .userName{ 
+			     width:200px; 
+			     height:40px; 
+			     line-height:40px; 
+			     border:1px solid #CCC; 
+			     }  
+			   #form-itemGroup .default{ 
+			     width:200px; 
+			     height:32px; 
+			     line-height:32px; 
+			     color:#999; 
+			     } 
+			   #form-itemGroup .error{ 
+			     height:32px; 
+			     line-height:32px; 
+			     color:#F00; 
+			     }
+			   #form-itemGroup .success{ 
+			     height:32px; 
+			     line-height:32px; 
+			     color:#096; 
+			     }  
+			   .divBtn{ 
+			     margin-top:20px; 
+			     margin-left:50px; 
+			     width:100px; 
+			     height:32px; 
+			     line-height:32px; 
+			     background-color:#F93; 
+			     margin-bottom:10px; 
+			     color:#ffffff; 
+			     font-weight:bold; 
+			     border:none; 
+			     } 
+		</style>
+	</head>
+	<body>
+		<div class="divAll">
+		   <div id="titles">用户登录</div> 
+		   <div id="contents"> 
+			<form action="index.html"style="position: relative;bottom:0px;left: 0px;">
+				<button type="submit">返回</button>
+			</form>
+		    <p class="a">Registration From <a href="register.html">还没有账号？去注册！</a></p>
+		<form action="index.html" onSubmit="return checkForm()" align="center">
+		    <div id="form-itemGroup"> 
+		      <label for="userName">用&nbsp;户&nbsp;名：</label> 
+		      <input type="text" id="userName" class="userName" onBlur="checkUserName()" oninput="checkUserName()" placeholder="请输入至少3位的用户名"> 
+		      <span class="default" id="nameErr"></span> 
+		    </div> 
+		    <div id="form-itemGroup"> 
+		      <label for="userPasword">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label> 
+		      <input type="password" id="userPasword" class="userName" onBlur="checkPassword()" oninput="checkPassword()" placeholder="请输入4到8位的密码"> 
+		      <span class="default" id="passwordErr"></span> 
+		    </div> 
+			<div>
+			  <button type="submit" class="divBtn">登录</button>
+			 </div> 
+			</form>
+		</div>
+		</div>
+		<script>
+			function checkForm(){
+			  var nametip = checkUserName(); 
+			  var passtip = checkPassword();  
+			  return nametip && passtip ; 
+			 
+			  } 
+			  //验证用户名   
+			  function checkUserName(){ 
+			  var username = document.getElementById('userName'); 
+			  var errname = document.getElementById('nameErr'); 
+			  var pattern = /^\w{3,}$/;  //用户名格式正则表达式：用户名要至少三位 
+			  if(username.value.length == 0){ 
+			    errname.innerHTML="用户名不能为空"
+			    errname.className="error"
+			    return false; 
+			    } 
+			  if(!pattern.test(username.value)){ 
+			    errname.innerHTML="用户名不合规范"
+			    errname.className="error"
+			    return false; 
+			    } 
+			   else{ 
+			     errname.innerHTML="OK"
+			     errname.className="success"; 
+			     return true; 
+			     } 
+			  } 
+			  //验证密码   
+			function checkPassword(){ 
+			  var userpasswd = document.getElementById('userPasword'); 
+			  var errPasswd = document.getElementById('passwordErr'); 
+			  var pattern = /^\w{4,8}$/; //密码要在4-8位 
+			  if(!pattern.test(userpasswd.value)){ 
+			    errPasswd.innerHTML="密码不合规范"
+			    errPasswd.className="error"
+			    return false; 
+			    } 
+			   else{ 
+			     errPasswd.innerHTML="OK"
+			     errPasswd.className="success"; 
+			     return true; 
+			     } 
+			  } 
+		</script>
+	</body>
+</html>

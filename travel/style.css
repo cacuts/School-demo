@@ -1,0 +1,272 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+#index{
+				width: 100%;
+				height: auto;
+				border: none;
+			}
+			#one{
+				width: 100%;
+				height: 500px;	
+				background-image:url(image/d148285e-4178-4cec-bd73-e50fd9a52d48.png);
+				/* background-attachment: fixed; */
+				background-repeat: no-repeat;
+				background-size: 100%  500px;
+			}
+			#menu{
+				width: 100%;
+				height: 100px;
+			
+				
+			}
+			#special{
+				width: 500px;
+				height: 200px;
+				margin: 20px;
+				position: relative;
+				left: 100px;
+			}
+			#search{
+				width: 1080px;
+				height: 60px;
+				background: white;
+				border: transparent;
+				margin: 1px;
+				position: relative;
+				top:50px ;
+				left: 120px;
+			}
+			#two{
+				width: 1080px;
+				height: 150px;
+				border: solid transparent;
+				margin: 1px;
+				position: relative;
+				left: 120px;
+			}
+			#goal{
+				width: 1072px;
+				height: 80px;
+				border: transparent ;
+				margin: 1px;
+				position: relative;
+				/* top:62px; */
+			}
+			#three{
+				width: 1080px;
+				height: 650px;
+				border: solid transparent;
+				position: relative;
+				left: 120px;
+			}
+			.one{
+				width:334px;
+				height: 300px;
+				border: solid transparent;
+				margin: 10px;
+				float: right;
+			}
+			.one img:hover{
+				transform: scale(1.1);
+			}
+			#four{
+				width: 1080px;
+				height: 200px;
+				border: solid transparent;  	
+				margin: 1px;
+				position: relative;
+			
+				left: 120px;
+			}
+			.two{
+				width: 350px;
+				height: 100px;
+				border: solid transparent;
+				margin: 4px;
+			/* 	float: right; */ 
+				
+				
+			}
+			
+			#five{
+				width: 1080px;
+				height: 350px;
+				margin: 1px;
+				border: solid transparent;
+				position: relative;
+				bottom: 0px;
+				left: 120px;
+			}
+			.three{
+				width: 164px;
+				height: 288px;
+				border: solid transparent;
+				margin: 5px;
+				float: right;
+				position: relative;
+				bottom: 150px;
+			}
+			.three img:hover{transform: scale(1.1);}
+			#six{
+				width: 1080px;
+				height: 450px;
+				border: solid transparent ;
+				position: relative;
+				top: 50px;
+				left: 120px;
+			}
+			.four{
+				width: 261px;
+				height: 200px;
+				border: solid transparent;
+				background-color: white;
+				z-index: 1;
+				position: relative;bottom: 140px;
+				margin: 1px;
+				float: right;	
+			}
+			.four img:hover{
+				transform: scale(1.1);
+				z-index: 4;
+				}
+			#seven{
+				width: 1080px;
+				height: 450px;
+				margin: 1px;
+				border: solid transparent ;
+				position: relative;
+				left: 120px;
+				top: 50px;
+			}
+			.five{
+				width: 164px;
+				height: 288px;
+				border: solid transparent;
+				margin: 5px;
+				float: right;
+				position: relative;
+				bottom: 120px;
+			}
+			.five img:hover{transform: scale(1.1);overflow: hidden;}
+			#eight{
+				width: 1080px;
+				height: 400px;
+				margin: 1px;
+				border: solid transparent;
+				position: relative;
+				left: 120px;
+				top: 50px;
+			}
+			.six{
+				width: 253px;
+				height: 288px;
+				/* border: solid; */
+				margin: 5px;
+				float: right;
+				position: relative;
+				top: 50px;
+			}
+			.search input{
+				width: 200px;height: 42px;
+				padding-left: 100px;padding-right: 100px;
+				border: 3px solid skyblue;border-radius: 5px;
+				background-color: transparent;
+				position: relative;
+				top: 25px;left: 100px;
+				font-size: 18px;
+			}
+			.search button:before{
+				font-size: 18px;background-color: skyblue;
+			}
+			.search button{
+				height: 50px;width: 50px;cursor: pointer;
+				position: absolute;background-color: skyblue;border-radius:  5px 0 0 5px;
+				width: 80px;top: 25px;right: 193px;
+			}
+			  #menu ul{/*设置导航栏的框框*/
+					 	margin: 10px auto;/*框框整体的位置，30px是指离网页的顶部和下部的距离，auto控制的是左右距离为自动调节*/
+						width: 650px;/*框框的宽度*/
+						height: 50px;/*框框的长度*/
+						padding: 0px;/*将框框的padding设置为零，不然会导致框框里的内容与框边缘有间隔*/
+						position: relative;
+						bottom: 40px;left: 310px;
+						
+					}
+					 #menu li{
+						list-style-type: none;/* 去掉li前的点 */
+						float: left;/*将li设置成做浮动，变为联动*/
+					}
+					 #menu a{
+						display: block;/*将a变成块状*/
+						width: 60px;/*设置块的宽度*/
+						height: 40px;/*设置块的长度*/
+						font-family: Microsoft Yahei;
+						line-height: 45px;/*设置字体在块中的高度*/
+						margin: 0px 0px;/*块里的高宽通过margin设置*/
+						color: white;
+						text-align: center;/*字体居中*/
+						text-decoration: none;/*去掉下划线*/
+						font-size: 15px;
+					}
+					#menu ul li ul{
+									display: none;/*默认隐藏*/
+									top:30px;
+									width: 100px;
+									border: 1px solid transparent;
+									position: absolute;
+									left: 0px;
+								}
+								#menu ul li:hover ul{
+									display: block;
+									
+								}
+								 #menu ul li:hover ul li a{
+									display: block;
+									/* background-color: green; */
+								} 
+					 #menu a:hover{
+						color: green;
+			}
+			#special button{
+				color: white;height: 48px;width: 200px;
+				font-size: 20px;
+				background-color: palevioletred;border: none;
+				border-radius: 5px;
+				position: relative;
+				top:20px;left:0px;
+			}
+			
+		#goal ul{/*设置导航栏的框框*/
+				 	margin: 10px auto;/*框框整体的位置，30px是指离网页的顶部和下部的距离，auto控制的是左右距离为自动调节*/
+					width: 1300px;/*框框的宽度*/
+					height: auto;/*框框的长度*/
+					padding: 0px;/*将框框的padding设置为零，不然会导致框框里的内容与框边缘有间隔*/
+					position: relative;
+					bottom: 0px;left: 3px;
+					
+				}
+				 #goal li{
+					list-style-type: none;/* 去掉li前的点 */
+					float: left;/*将li设置成做浮动，变为联动 */
+				}
+				 #goal a{
+					display: block;/*将a变成块状*/
+					width: 115px;/*设置块的宽度*/
+					height: 50px;/*设置块的长度*/
+					font-family: Microsoft Yahei;
+					font-size: 50px;
+					border-radius: 10px;
+					line-height: 50px;/*设置字体在块中的高度*/
+					background-color: cadetblue;
+					margin: 0px 5px;/*块里的高宽通过margin设置*/
+					color: black;
+					text-align: center;/*字体居中*/
+					text-decoration: none;/*去掉下划线*/
+					font-size: 15px;
+				}
+				 #goal a:hover{
+					color: white;
+					
+		}
